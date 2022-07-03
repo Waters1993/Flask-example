@@ -1,8 +1,8 @@
 from email.mime import application
-from flask import Flask
+from flask import Flask, render_template
 
 application = Flask(__name__)
 
 @application.route('/')
 def Hello():
-    return 'Hey, Everybody'
+    return render_template("layout.html")
