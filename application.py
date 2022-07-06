@@ -5,4 +5,8 @@ application = Flask(__name__)
 
 @application.route('/')
 def Hello():
-    return render_template("layout.html")
+    return render_template("index.html")
+
+@application.route('/register')
+def register():
+    return render_template("register.html")
